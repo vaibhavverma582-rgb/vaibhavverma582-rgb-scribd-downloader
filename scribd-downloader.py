@@ -70,8 +70,8 @@ def build_chrome_options(runtime_profile_dir):
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--force-color-profile=srgb")
     options.add_argument("--hide-scrollbars")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option("useAutomationExtension", False)
+    # Removed for compatibility with current Chrome/Selenium.
+    # These legacy experimental options can cause Chrome 154 to exit.
     return options
 
 
